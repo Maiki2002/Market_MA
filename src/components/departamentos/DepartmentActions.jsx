@@ -1,4 +1,9 @@
-export default function DepartmentActions({ onOpenCreate, onOpenDelete, disabled }) {
+export default function DepartmentActions({
+  onOpenCreate,
+  onOpenDelete,
+  onDownload,
+  disabled,
+}) {
   return (
     <aside className="products-actions">
       <button
@@ -15,6 +20,13 @@ export default function DepartmentActions({ onOpenCreate, onOpenDelete, disabled
         disabled={disabled}
       >
         Borrar departamento
+      </button>
+      <button
+        type="button"
+        onClick={onDownload}
+        className="products-btn products-btn--secondary"
+      >
+        Descargar Reporte 
       </button>
     </aside>
   );

@@ -4,6 +4,7 @@ import DepartmentList from "../components/departamentos/DepartmentList";
 import DepartmentActions from "../components/departamentos/DepartmentActions";
 import CreateDepartmentModal from "../components/departamentos/CreateDepartmentModal";
 import DeleteDepartmentModal from "../components/departamentos/DeleteDepartmentModal";
+import { downloadRowsAsTxt } from "../utils/downloadTxt";
 
 function parseDepartmentKey(value) {
   const trimmed = value.trim();
@@ -159,6 +160,10 @@ export default function Departamentos() {
     closeDeleteModal();
   }
 
+  function downloadDepartamentos() {
+    downloadRowsAsTxt("departamentos.txt", dataDepartamentos);
+  }
+
   return (
     <div className="products-layout">
       <DepartmentList departments={dataDepartamentos} />
@@ -166,6 +171,7 @@ export default function Departamentos() {
       <DepartmentActions
         onOpenCreate={openCreateModal}
         onOpenDelete={openDeleteModal}
+        onDownload={downloadDepartamentos}
         disabled={isSaving}
       />
 

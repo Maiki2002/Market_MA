@@ -1,4 +1,9 @@
-export default function ProductActions({ onOpenCreate, onOpenDelete, disabled }) {
+export default function ProductActions({
+  onOpenCreate,
+  onOpenDelete,
+  onDownload,
+  disabled,
+}) {
   return (
     <aside className="products-actions">
       <button
@@ -15,6 +20,13 @@ export default function ProductActions({ onOpenCreate, onOpenDelete, disabled })
         disabled={disabled}
       >
         Borrar producto
+      </button>
+      <button
+        type="button"
+        onClick={onDownload}
+        className="products-btn products-btn--secondary bg-green-600"
+      >
+        Descargar Reporte
       </button>
     </aside>
   );

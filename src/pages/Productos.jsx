@@ -4,6 +4,7 @@ import ProductActions from "../components/productos/ProductActions";
 import ProductList from "../components/productos/ProductList";
 import CreateProductModal from "../components/productos/CreateProductModal";
 import DeleteProductModal from "../components/productos/DeleteProductModal";
+import { downloadRowsAsTxt } from "../utils/downloadTxt";
 
 export default function Productos() {
   const [dataProductos, setDataProductos] = useState([]);
@@ -178,6 +179,10 @@ export default function Productos() {
     setProductToDelete(data);
   }
 
+  function downloadProductos() {
+    downloadRowsAsTxt("productos.txt", dataProductos);
+  }
+
   return (
     <div className="products-layout">
       <ProductList products={dataProductos} />
@@ -185,6 +190,7 @@ export default function Productos() {
       <ProductActions
         onOpenCreate={openCreateModal}
         onOpenDelete={openDeleteModal}
+        onDownload={downloadProductos}
         disabled={isSaving}
       />
 
