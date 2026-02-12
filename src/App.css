@@ -1,0 +1,268 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.sidebar {
+  width: 260px;
+  padding: 1.5rem 1rem;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.sidebar__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.sidebar__subtitle {
+  margin: 0.25rem 0 1.5rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.65rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.sidebar__icon {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.sidebar__link:hover {
+  background-color: rgba(148, 163, 184, 0.2);
+  color: #f8fafc;
+}
+
+.sidebar__link--active {
+  background: #1d4ed8;
+  color: #eff6ff;
+}
+
+.app-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.page-card {
+  max-width: 760px;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.page-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.6rem;
+  color: #0f172a;
+}
+
+.page-text {
+  margin: 0;
+  color: #334155;
+}
+
+.products-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.products-card {
+  max-width: none;
+}
+
+.products-summary {
+  margin: 0 0 1rem;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.products-scroll {
+  border: 1px solid #dbe3ef;
+  border-radius: 0.85rem;
+  background: linear-gradient(180deg, #f8fbff 0%, #f1f5f9 100%);
+  max-height: min(58vh, 520px);
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.products-scroll::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+.products-scroll::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 999px;
+}
+
+.products-scroll::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 999px;
+}
+
+.products-table-wrap {
+  min-width: 500px;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+}
+
+.products-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #475569;
+  background: #e2e8f0;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.products-table td {
+  padding: 0.72rem 0.8rem;
+  background: #ffffff;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.products-table tbody tr:hover td {
+  background: #eff6ff;
+}
+
+.products-id-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.79rem;
+  font-weight: 700;
+}
+
+.products-table-name {
+  font-weight: 650;
+}
+
+.products-provider-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 0.22rem 0.62rem;
+  font-size: 0.84rem;
+  color: #334155;
+  background: #f8fafc;
+}
+
+.products-empty {
+  padding: 1rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 0.8rem;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.products-actions {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.products-btn {
+  border: 0;
+  border-radius: 0.7rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 130ms ease, opacity 130ms ease, background-color 130ms ease;
+}
+
+.products-btn:hover {
+  transform: translateY(-1px);
+}
+
+.products-btn:active {
+  transform: translateY(0);
+}
+
+.products-btn--primary {
+  color: #eff6ff;
+  background: #2563eb;
+}
+
+.products-btn--primary:hover {
+  background: #1d4ed8;
+}
+
+.products-btn--danger {
+  color: #ffffff;
+  background: #dc2626;
+}
+
+.products-btn--danger:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .app-content {
+    padding: 1rem;
+  }
+
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .products-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .products-table-wrap {
+    min-width: 460px;
+  }
+}
