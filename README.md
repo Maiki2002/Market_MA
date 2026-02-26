@@ -28,3 +28,4 @@ Frontend web construido con **React + Vite** y desplegado en Vercel.
    ```bash
    git clone https://github.com/Maiki2002/Market_MA.git
    cd Market_MA
+   npm run dev
