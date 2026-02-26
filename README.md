@@ -1,6 +1,7 @@
 # Market_MA
 
 Frontend web construido con **React + Vite** y desplegado en Vercel.
+Incluye un stack moderno para interfaz y navegación (React Router, Tailwind, MUI/Material Tailwind) y contempla integración con Supabase como backend/servicios.
 
 ---
 
