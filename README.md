@@ -1,16 +1,30 @@
-# React + Vite
+# Market_MA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend web construido con **React + Vite** y desplegado en Vercel.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack / Tecnologías
 
-## React Compiler
+- **React + Vite**  [oai_citation:4‡GitHub](https://github.com/Maiki2002/Market_MA)  
+- **React Router**  [oai_citation:5‡GitHub](https://raw.githubusercontent.com/Maiki2002/Market_MA/main/package.json)  
+- **Tailwind CSS**  [oai_citation:6‡GitHub](https://raw.githubusercontent.com/Maiki2002/Market_MA/main/package.json)  
+- **MUI (Material UI)**  [oai_citation:7‡GitHub](https://raw.githubusercontent.com/Maiki2002/Market_MA/main/package.json)  
+- **Material Tailwind**  [oai_citation:8‡GitHub](https://raw.githubusercontent.com/Maiki2002/Market_MA/main/package.json)  
+- **Supabase (cliente JS)**  [oai_citation:9‡GitHub](https://raw.githubusercontent.com/Maiki2002/Market_MA/main/package.json)  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Requisitos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js (recomendado: versión LTS)
+- npm
+
+---
+
+## Instalación y ejecución en local
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Maiki2002/Market_MA.git
+   cd Market_MA
